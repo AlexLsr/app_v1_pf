@@ -3,6 +3,10 @@ import json
 
 from handlers.routes import configure_routes
 
+from flask_wtf.csrf import CSRFProtect
+csrf = CSRFProtect(app)
+csrf.init_app(app)
+
 
 def test_base_route():
     app = Flask(__name__)
