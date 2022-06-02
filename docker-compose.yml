@@ -13,9 +13,3 @@ services:
     # Make app as nginx dependecy service
     depends_on:
       - app
-  netdata:
-    image: netdata/netdata
-    hostname: netdata
-    ports:
-    - 19999:19999
-    container_name: netdata-test
