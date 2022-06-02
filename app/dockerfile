@@ -1,9 +1,6 @@
 FROM python:3.8-slim-buster
 EXPOSE 5000
 WORKDIR /app
-RUN apt update
-RUN apt install wget -y
-RUN pwd
 COPY * /app/
 RUN ls -l /app
 
