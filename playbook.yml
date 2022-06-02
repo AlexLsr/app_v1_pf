@@ -13,7 +13,7 @@
       clone: yes
       update: yes
       force: yes
-  - name: 🐳 Arrêt de l'application 
+  - name: 🐳 Arrêt de l'application
     shell: "docker system prune --all -f && docker kill $(docker ps -q) && docker rm $(docker ps -a -q) && docker rmi $(docker images -q)"
     args:
       chdir: /home/debian/app/
