@@ -2,7 +2,8 @@ FROM python:3.8-slim-buster
 WORKDIR /app
 RUN apt update
 RUN apt install wget -y
-COPY app /app
+RUN pwd
+COPY * /app/
 RUN ls -l /app
 
 RUN pip3 install --no-cache-dir -r requirements.txt
