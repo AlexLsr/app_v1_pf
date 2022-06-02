@@ -4,11 +4,11 @@
   become: yes
   tasks:
   - name: supprimer fichiers
-    shell: "rm -rf /home/debian/app/*"
+    shell: "rm -rf /home/debian/application/*"
   - name: Importer les fichiers du git
     git:
       repo: https://github.com/AlexLsr/app_v1_pf.git
-      dest: /home/debian/app/
+      dest: /home/debian/application/
       version: "main"
       clone: yes
       update: yes
@@ -18,4 +18,4 @@
   - name: Déploiement du conteneur de l'app
     shell: "docker-compose up --build -d --scale app=3"
     args:
-      chdir: /home/debian/app/
+      chdir: /home/debian/application/
