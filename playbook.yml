@@ -16,6 +16,6 @@
   - name: DEBUG	
     shell: "tree"
   - name: Déploiement du conteneur de l'app
-    shell: "docker-compose up -d"
+    shell: "docker-compose up --build -d --scale app=3"
     args:
       chdir: /home/debian/app/
